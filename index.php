@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Design Tech Académie</title>
+    <title>Termotuturu</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
