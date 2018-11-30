@@ -1,14 +1,14 @@
 #termo{
-  position: relative;
+  position: absolute;
   display: block;
 }
 
 .rouge{
   background-color: red;
   width : 10px;
-  height : 40px;
+  height : 20px;
   content: "";
-  position: absolute;
-  bottom: -475px;
-  left: 50px;
+  position: relative;
+  top: 435px; 
+  left: 45px;
 }

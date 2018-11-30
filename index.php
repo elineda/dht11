@@ -19,16 +19,18 @@ echo "Température : ".$json_test['temperature'];
 echo " Humidité : ".$json_test['humidite'];
 echo "<br> La date est : ".date("d M y");
 
-
-?>
-<br>
-<img src="img/thermometer.jpg" id="termo"><div class="rouge" style=<?php
 $test=file_get_contents("data.json");
 $json_test=json_decode($test, true);
 $temp=$json_test['temperature'];
 $tempInt=(int)$temp;
 $height=($tempInt/50*195)+160;
-echo "\"height:".$height."px;\"";
+$top=(($tempInt+30)*4)*-1+435;
+
+?>
+<br>
+<img src="img/thermometer.jpg" id="termo"><div class="rouge" style=<?php
+
+echo "\"height:".$height."px; top:".$top."px;\"";
 
 ?>></div></img>
 </main>
