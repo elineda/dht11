@@ -4,17 +4,16 @@
   <head>
     <meta charset="utf-8">
     <title>Termotuturu</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header>
       <img src="tuturu.png"></img>
     </header>
     <main>
+      <h1>Température</h1>
 
-      <?php
-      echo "coucou ";
-      ?>
+      
 </main>
     <footer>
 
