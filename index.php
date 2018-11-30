@@ -13,7 +13,7 @@
     <main>
 
       <?php
-      echo "coucou";
+      echo "coucou ";
       ?>
 </main>
     <footer>
