@@ -15,7 +15,8 @@
 <?php
 $test=file_get_contents("data.json");
 $json_test=json_decode($test, true);
-echo $json_test;
+echo "Température : ".$json_test['temperature'];
+echo " Humidité : ".$json_test['humidite'];
 
 ?>
 
