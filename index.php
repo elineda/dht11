@@ -12,8 +12,13 @@
     </header>
     <main>
       <h1>Température</h1>
+<?php
+$test=file_get_contents("data.json");
+$json_test=json_decode($test, true);
+echo $json_test;
 
-      
+?>
+
 </main>
     <footer>
 
