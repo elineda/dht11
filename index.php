@@ -19,6 +19,9 @@ echo "Température : ".$json_test['temperature'];
 echo " Humidité : ".$json_test['humidite'];
 echo "<br> La date est : ".date("d M y");
 
+$file="data.json";
+
+echo "<br>Dernière modification le ".date("d F  Y",filemtime($file));
 $test=file_get_contents("data.json");
 $json_test=json_decode($test, true);
 $temp=$json_test['temperature'];
