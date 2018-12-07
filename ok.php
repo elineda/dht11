@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST["temperature"])) {
   echo $_POST["temperature"];
-  $fichier=fopen("data.json","w");
-  $ecrit='{"temperature":"'.$_POST["temperature"].'","humidite":"45"}';
+  $fichier=fopen("data.txt","w");
+  $ecrit=$_POST["temperature"];
   fwrite($fichier,$ecrit);
   fclose($fichier);
 }
