@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST["temperature"])) {
   echo $_POST["temperature"];
-  $fichier=fopen("data.txt","w");
+  $fichier=fopen("data.json","w");
   $ecrit=$_POST["temperature"];
   fwrite($fichier,$ecrit);
   fclose($fichier);

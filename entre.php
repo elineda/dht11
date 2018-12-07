@@ -14,7 +14,7 @@
       <h1>Envoie</h1>
 <form class="entre" action="ok.php" method="post">
   <p>Temperature : </p>
-  <input type="number" name="temperature" value="0" id="temperature">
+  <input type="text" name="temperature" value="0" id="temperature">
   <button type="submit" name="button">goooooooooo</button>
 </form>
 </main>
