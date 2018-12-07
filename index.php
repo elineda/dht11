@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="1">
+    <meta http-equiv="refresh" content="10">
     <title>Termotuturu</title>
     <link rel="stylesheet" href="main.css" />
   </head>

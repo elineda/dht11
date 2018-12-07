@@ -1,14 +1,11 @@
 <?php
-if (isset($_POST["temperature"])) {
-  echo $_POST["temperature"];
+
+
+  $ecrit = file_get_contents('php://input');
   $fichier=fopen("data.json","w");
-  $ecrit=$_POST["temperature"];
   fwrite($fichier,$ecrit);
   fclose($fichier);
-}
-else {
-  echo "Connard";
-}
+
 
 
  ?>
