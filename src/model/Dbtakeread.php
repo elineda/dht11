@@ -20,11 +20,11 @@ class Dbtakeread extends Dbconnect{
     $bdd=$this->dbConnect();
     $req=$bdd->prepare('SELECT * FROM `temp` ORDER BY `temp`.`daate` DESC LIMIT 1');
     $req->execute();
-    $temprow=$req->fetch();
+    $row=$req->fetch();
     $temp= new Temp;
-    $temp->temperature=$temprow['temp'];
-    $temp->humidite=$temprow['humidite'];
-    $temp->date=$temprow['daate'];
+    $temp->temperature=$row['temp'];
+    $temp->humidite=$row['humidite'];
+    $temp->date=$row['daate'];
     return $temp;
   }
 }
