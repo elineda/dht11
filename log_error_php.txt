@@ -1,3 +1,0 @@
-[21-Dec-2018 14:08:45 Europe/Berlin] PHP Warning:  Use of undefined constant e_all - assumed 'e_all' (this will throw an Error in a future version of PHP) in /var/www/html/dht11/ok.php on line 9
-[21-Dec-2018 14:08:46 Europe/Berlin] PHP Warning:  Use of undefined constant e_all - assumed 'e_all' (this will throw an Error in a future version of PHP) in /var/www/html/dht11/ok.php on line 9
-[21-Dec-2018 14:09:15 Europe/Berlin] PHP Warning:  Use of undefined constant e_all - assumed 'e_all' (this will throw an Error in a future version of PHP) in /var/www/html/dht11/ok.php on line 9
