@@ -1,3 +1,4 @@
 .ftpconfig
 .ftpignore
 okindentifiant.php
+vendor/
