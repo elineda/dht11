@@ -1,0 +1,17 @@
+#rouge{
+  background-color: red;
+  position: relative;
+}
+
+#orange{
+  background-color: orange;
+  position: relative;
+  top: 125px;
+}
+
+#vert{
+  background-color: green;
+  position: relative;
+
+  top: 250px;
+}
