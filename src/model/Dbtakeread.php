@@ -29,5 +29,3 @@ class Dbtakeread extends Dbconnect{
   }
 }
 
-
- ?>

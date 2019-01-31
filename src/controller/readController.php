@@ -8,9 +8,15 @@ $dbtakeread= new Dbtakeread;
 
 $temp=$dbtakeread->readTemp();
 
-require __DIR__.'/../view/tuturu.php';
+$tuturu=new \DHT\view\Tuturu('Temperature');
+
+$tuturu->setTemp($temp);
+
+$tuturu->addBody('thermobody');
 
 
 
+$tuturu->showPage();
 
- ?>
+
+
