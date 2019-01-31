@@ -1,23 +1,28 @@
 <div>
-<h1>Température </h1>
-<?php
+    <h1>Température </h1>
+    <?php
+    global $error;
+    if (!empty($error)){
+        echo '<div class="alert alert-danger">'.$error.'</div>';
+    }
+    else{
+    $temp = $this->temp;
 
-$temp=$this->temp;
+
+    echo "Température : " . $temp->temperature;
+    echo " Humidité : " . $temp->humidite;
+    echo "<br> La date est : " . date("d M y");
 
 
-echo "Température : ".$temp->temperature;
-echo " Humidité : ".$temp->humidite;
-echo "<br> La date est : ".date("d M y");
+    echo "<br>Dernière modification le " . $temp->date;
 
+    $tempInt = (int)$temp->temperature;
+    $height = ($tempInt / 50 * 195) + 160;
+    $top = (($tempInt + 30) * 4) * -1 + 435;
 
-echo "<br>Dernière modification le ".$temp->date;
-
-$tempInt=(int)$temp->temperature;
-$height=($tempInt/50*195)+160;
-$top=(($tempInt+30)*4)*-1+435;
-
-?>
-<br>
-<img alt="rien" src="thermometer.jpg" id="termo"><div class="rouge" style=<?="\"height:".$height."px; top:".$top."px;\"";
-
-?>></div>
+    ?>
+    <br>
+    <img alt="rien" src="thermometer.jpg" id="termo">
+    <div class="rouge" style=<?= "\"height:" . $height . "px; top:" . $top . "px;\"</div>";
+    }
+    ?>

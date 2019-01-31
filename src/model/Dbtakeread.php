@@ -7,7 +7,8 @@ use DHT\model\Temp as Temp;
 class Dbtakeread extends Dbconnect{
 
   public function takeTemp($temperature,$humidite,$date){
-    $bdd=$this->dbConnect();
+    $bdd=$this->dbConnect()
+    or die('connection pas possible');
     $req = $bdd->prepare('INSERT INTO temp (temp, humidite, daate)'.'VALUES (:temp, :humidite, :daate)');
 
     $req->execute(array('temp' => ''.$temperature,
@@ -17,15 +18,20 @@ class Dbtakeread extends Dbconnect{
     $bdd=null;
   }
   public function readTemp(){
-    $bdd=$this->dbConnect();
+      global $error;
+    $bdd=$this->dbConnect()
+    or die('connection pas possible');
     $req=$bdd->prepare('SELECT * FROM `temp` ORDER BY `temp`.`daate` DESC LIMIT 1');
-    $req->execute();
+    if($req->execute()){
     $row=$req->fetch();
     $temp= new Temp;
     $temp->temperature=$row['temp'];
     $temp->humidite=$row['humidite'];
     $temp->date=$row['daate'];
-    return $temp;
+    return $temp;}
+    else{
+        $error="rapé au niveau de la dbb";
+    }
   }
 }
 
