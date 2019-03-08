@@ -12,11 +12,9 @@ $tuturu=new \DHT\view\Tuturu('Temperature');
 
 $tuturu->setTemp($temp);
 
+
 $tuturu->addBody('thermobody');
 
 
 
 $tuturu->showPage();
-
-
-

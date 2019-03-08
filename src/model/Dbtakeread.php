@@ -33,5 +33,21 @@ class Dbtakeread extends Dbconnect{
         $error="rapé au niveau de la dbb";
     }
   }
-}
+  public function readTenTemp()
+  {
+      global $error;
+      $lim=$_GET['u'];
+      $deb=$_GET['v'];
+      $tab=[];
+      $bdd = $this->dbConnect()
+      or die('connection pas vraimet possible');
+      $req = $bdd->query('SELECT * FROM `temp` ORDER BY `daate` DESC LIMIT '.$lim.' OFFSET '.$deb);
+     while($row=$req->fetch()){
+     array_push($tab,$row['temp']);
+    }
+    $json=json_encode($tab);
 
+
+      return $json;
+  }
+}

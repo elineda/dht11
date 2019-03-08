@@ -14,7 +14,7 @@ class Tuturu
     public $title;
     public $body;
     public $temp;
-
+    public $val;
     public function __construct($title)
     {
         $this->title=$title;
@@ -35,5 +35,9 @@ class Tuturu
     public function setTemp($temp)
     {
         $this->temp = $temp;
+
+    }
+    public function setVal($val){
+      $this->val=$val;
     }
 }
